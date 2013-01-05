@@ -1,0 +1,24 @@
+{
+  "name": "lazuli/vsxlsx",
+  "description": "A (very simple) XLSX parser",
+  "license": "MIT",
+  "keywords": ["xlsx", "spreadsheet"],
+  "authors": [
+      {
+          "name": "Alexa Grey",
+          "email": "devel@mouse.vc",
+          "homepage": "http://alexa.is"
+      }
+  ],
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "VSXLSX": "src/"
+    }
+  }
+}

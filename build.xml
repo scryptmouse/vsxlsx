@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="VSXLSX" basedir="." default="help">
+	<target name="docs">
+		<apigen
+			source="src/"
+			destination="docs"
+			title="VSXLSX - A (very simple) XLSX parser"
+			/>
+	</target>
+
+	<target name="help">
+		<echo msg="'phing docs' to build docs." />
+	</target>
+</project>
