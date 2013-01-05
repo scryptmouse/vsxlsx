@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class VSXLSX\Parser | VSXLSX - A (very simple) XLSX parser</title>
+
+	<script type="text/javascript" src="resources/combined.js?2230489249"></script>
+	<script type="text/javascript" src="elementlist.js?3542680601"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-VSXLSX.html">VSXLSX</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-VSXLSX.Parser.html">Parser</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-VSXLSX.alphacize.html">alphacize</a></li>
+				<li><a href="function-VSXLSX.column_index.html">column_index</a></li>
+				<li><a href="function-VSXLSX.column_name.html">column_name</a></li>
+				<li><a href="function-VSXLSX.default_columns.html">default_columns</a></li>
+				<li><a href="function-VSXLSX.indicize.html">indicize</a></li>
+				<li><a href="function-VSXLSX.recursive_rm.html">recursive_rm</a></li>
+				<li><a href="function-VSXLSX.row_index.html">row_index</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-VSXLSX.html" title="Summary of VSXLSX"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Parser</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-VSXLSX.html">VSXLSX</a><br />
+		
+
+		<b>Located at</b> <a href="source-class-VSXLSX.Parser.html#125-459" title="Go to source code">VSXLSX/Parser.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#148-156" title="Go to source code">__construct</a>( <span>string <var>$file</var> = <span class="php-quote">''</span></span>, <span>integer <var>$sheetNum</var> = <span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>Path to XLSX file.</dd>
+					<dt><var>$sheetNum</var></dt>
+					<dd><code>integer</code><br>Selected worksheet number</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_file" id="_set_file">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-VSXLSX.Parser.html">VSXLSX\Parser</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_file">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#158-173" title="Go to source code">set_file</a>( <span>string <var>$filename</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set filename to parse</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set filename to parse</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filename</var></dt>
+					<dd><code>string</code><br>Path to XLSX file.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-VSXLSX.Parser.html">VSXLSX\Parser</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="use_sheet" id="_use_sheet">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-VSXLSX.Parser.html">VSXLSX\Parser</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_use_sheet">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#175-186" title="Go to source code">use_sheet</a>( <span>integer <var>$number</var> = <span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Select worksheet to parse.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Select worksheet to parse.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$number</var></dt>
+					<dd><code>integer</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-VSXLSX.Parser.html">VSXLSX\Parser</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="has_header_row" id="_has_header_row">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-VSXLSX.Parser.html">VSXLSX\Parser</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_has_header_row">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#188-201" title="Go to source code">has_header_row</a>( <span>boolean <var>$value</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Define whether or not sheet has a header row. This is used to define the
+column names, which become array keys.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Define whether or not sheet has a header row. This is used to define the
+column names, which become array keys.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-VSXLSX.Parser.html">VSXLSX\Parser</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="header_names" id="_header_names">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-VSXLSX.Parser.html">VSXLSX\Parser</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_header_names">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#203-214" title="Go to source code">header_names</a>( <span>array <var>$arr</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Provide an array of names to override the headers with.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Provide an array of names to override the headers with.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arr</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-VSXLSX.Parser.html">VSXLSX\Parser</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#216-230" title="Go to source code">parse</a>( )</code>
+
+		<div class="description short">
+			
+<p>Parse the spreadsheet, returning the success of the parse.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parse the spreadsheet, returning the success of the parse.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>Successfulness of parse<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_sharedStrings_file" id="_get_sharedStrings_file">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_sharedStrings_file">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#232-240" title="Go to source code">get_sharedStrings_file</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the string path to the sharedStrings file.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the string path to the sharedStrings file.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_sheet_file" id="_get_sheet_file">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_sheet_file">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#242-250" title="Go to source code">get_sheet_file</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the string path to the selected worksheet's XML file.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the string path to the selected worksheet's XML file.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_tmp_dir" id="_get_tmp_dir">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_tmp_dir">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#252-261" title="Go to source code">get_tmp_dir</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get the temporary directory where this file's contents will be extracted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the temporary directory where this file's contents will be extracted.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_tmp_dir" id="_set_tmp_dir">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_tmp_dir">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#263-273" title="Go to source code">set_tmp_dir</a>( <span>string <var>$dir</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the directory to store temporary files. Directory must exist.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the directory to store temporary files. Directory must exist.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dir</var></dt>
+					<dd><code>string</code><br>Path to temporary directory.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_parsed" id="_get_parsed">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_parsed">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#275-281" title="Go to source code">get_parsed</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_errors" id="_get_errors">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_errors">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#283-291" title="Go to source code">get_errors</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get error messages.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get error messages.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extract" id="_extract">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extract">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#293-309" title="Go to source code">extract</a>( )</code>
+
+		<div class="description short">
+			
+<p>Extract the XLSX file into a temporary directory.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Extract the XLSX file into a temporary directory.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="load_files" id="_load_files">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_load_files">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#311-329" title="Go to source code">load_files</a>( )</code>
+
+		<div class="description short">
+			
+<p>Load the important XML files for processing.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Load the important XML files for processing.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="process" id="_process">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_process">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#331-360" title="Go to source code">process</a>( )</code>
+
+		<div class="description short">
+			
+<p>Process the rows into '$this-&gt;parsed'</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Process the rows into '$this-&gt;parsed'</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="process_cell" id="_process_cell">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_process_cell">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#362-389" title="Go to source code">process_cell</a>( <span><code><a href="class-SimpleXMLElement.html">SimpleXMLElement</a></code> <var>$cell</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Process a cell.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Process a cell.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cell</var></dt>
+					<dd><code><code><a href="class-SimpleXMLElement.html">SimpleXMLElement</a></code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="needs_headers" id="_needs_headers">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_needs_headers">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#391-401" title="Go to source code">needs_headers</a>( )</code>
+
+		<div class="description short">
+			
+<p>Determine if the parser still needs headers. Only for use with sheets that
+have a header row.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine if the parser still needs headers. Only for use with sheets that
+have a header row.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="is_using_default_headers" id="_is_using_default_headers">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_is_using_default_headers">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#403-411" title="Go to source code">is_using_default_headers</a>( )</code>
+
+		<div class="description short">
+			
+<p>Whether or not to use default header names (e.g. a, b, c, d...)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Whether or not to use default header names (e.g. a, b, c, d...)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="apply_headers" id="_apply_headers">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_apply_headers">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#413-432" title="Go to source code">apply_headers</a>( <span>array <var>$row</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Apply headers to a row.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Apply headers to a row.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>Array of cells</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>Array of cells mapped to keys<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_headers" id="_set_headers">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_headers">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#434-450" title="Go to source code">set_headers</a>( <span>array <var>$arr</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the first row to be the headers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the first row to be the headers.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arr</var></dt>
+					<dd><code>array</code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cleanup" id="_cleanup">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cleanup">#</a>
+		<code><a href="source-class-VSXLSX.Parser.html#452-458" title="Go to source code">cleanup</a>( )</code>
+
+		<div class="description short">
+			
+<p>Cleanup extracted files from temporary directory.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cleanup extracted files from temporary directory.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="file" id="$file">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#127-128" title="Go to source code"><var>$file</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$file" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Path to spreadsheet</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Path to spreadsheet</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="sheetNum" id="$sheetNum">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#129-130" title="Go to source code"><var>$sheetNum</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$sheetNum" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Selected worksheet number</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Selected worksheet number</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="strings" id="$strings">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-SimpleXMLElement.html">SimpleXMLElement</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#131-132" title="Go to source code"><var>$strings</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$strings" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>sharedStrings XML</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>sharedStrings XML</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="sheet" id="$sheet">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-SimpleXMLElement.html">SimpleXMLElement</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#133-134" title="Go to source code"><var>$sheet</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$sheet" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Worksheet XML</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Worksheet XML</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="headers" id="$headers">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#135-136" title="Go to source code"><var>$headers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$headers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>An array of column names</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>An array of column names</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="parsed" id="$parsed">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#137-138" title="Go to source code"><var>$parsed</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$parsed" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>An array that holds parsed rows.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>An array that holds parsed rows.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="errors" id="$errors">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#139-140" title="Go to source code"><var>$errors</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$errors" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>An array of error messages, populated if some step fails</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>An array of error messages, populated if some step fails</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="has_header" id="$has_header">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#141-142" title="Go to source code"><var>$has_header</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$has_header" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Whether or not the parsed spreadsheet has a "header" row to derive column
+names from</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether or not the parsed spreadsheet has a "header" row to derive column
+names from</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="header_overrides" id="$header_overrides">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#143-144" title="Go to source code"><var>$header_overrides</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$header_overrides" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>An array of header names</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>An array of header names</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="base_tmp_dir" id="$base_tmp_dir">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-VSXLSX.Parser.html#145-146" title="Go to source code"><var>$base_tmp_dir</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'./tmp'</span></code></td>
+		<td class="description"><div>
+			<a href="#$base_tmp_dir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Directory to store temporary files</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Directory to store temporary files</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		VSXLSX - A (very simple) XLSX parser API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
