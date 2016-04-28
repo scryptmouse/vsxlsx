@@ -140,6 +140,8 @@ class Parser
 	protected $errors = array();
 	/** @var boolean Whether or not the parsed spreadsheet has a "header" row to derive column names from */
 	protected $has_header = true;
+	/** @var boolean Whether or not the parsed spreadsheet's "headers" should be lower cased */
+	protected $lowercase_header = true;
 	/** @var array An array of header names */
 	protected $header_overrides = array();
 	/** @var string Directory to store temporary files */
@@ -181,6 +183,21 @@ class Parser
 	public function use_sheet($number = 1)
 	{
 		$this->sheetNum = (int) $number;
+
+		return $this;
+	}
+
+	/**
+     * Define whether or not the header fields should
+     * be lowercased.
+     * Only effective, if header_row = true
+	 *
+	 * @param	boolean
+	 * @return	Parser
+	 */
+	public function lowercase_header($value = true)
+	{
+		$this->lowercase_header = (boolean) $value;
 
 		return $this;
 	}
@@ -438,8 +455,13 @@ class Parser
 	 */
 	protected function set_headers($arr)
 	{
-		$headers = array_map(function($str) {
-			return preg_replace('/[\s]+/', '_', strtolower(trim($str)));
+        $lowercase_header = $this->lowercase_header;
+		$headers = array_map(function($str) use ($lowercase_header) {
+            $str = $lowercase_header
+                ? strtolower(trim($str))
+                : trim($str);
+
+			return preg_replace('/[\s]+/', '_', $str);
 		}, $arr);
 
 		if ($this->header_overrides)
