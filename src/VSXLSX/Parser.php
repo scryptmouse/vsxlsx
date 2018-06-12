@@ -190,9 +190,9 @@ class Parser
 	}
 
 	/**
-     * Define whether or not the header fields should
-     * be lowercased.
-     * Only effective, if header_row = true
+	 * Define whether or not the header fields should
+	 * be lowercased.
+	 * Only effective, if header_row = true
 	 *
 	 * @param	boolean
 	 * @return	Parser
@@ -232,18 +232,18 @@ class Parser
 		return $this;
 	}
 
-    /**
-     * Define whether or not row numbers should be parsed
-     *
-     * @param boolean
-     * @return Parser
-     */
+	/**
+	 * Define whether or not row numbers should be parsed
+	 *
+	 * @param boolean
+	 * @return Parser
+	 */
 	public function row_numbers($value = false)
-    {
-        $this->row_numbers = (boolean) $value;
+	{
+		$this->row_numbers = (boolean) $value;
 
-        return $this;
-    }
+		return $this;
+	}
 
 	/**
 	 * Parse the spreadsheet, returning the success of the parse.
@@ -381,17 +381,17 @@ class Parser
 				$row[row_index($cell)] = $this->process_cell($cell);
 			}
 
-            $rowAttributes = $xlrow->attributes();
-            $rowNumber = (integer) $rowAttributes->r;
+			$rowAttributes = $xlrow->attributes();
+			$rowNumber = (integer) $rowAttributes->r;
 
 			if ($this->needs_headers()) {
 				$this->set_headers($row);
 			} else {
-                $parsedRow = $this->apply_headers($row);
+				$parsedRow = $this->apply_headers($row);
 
-			    if ($this->row_numbers) {
-                    $parsedRow['__row_number'] = $rowNumber;
-                }
+				if ($this->row_numbers) {
+					$parsedRow['__row_number'] = $rowNumber;
+				}
 
 				$this->parsed[] = $parsedRow;
 			}
@@ -479,11 +479,11 @@ class Parser
 	 */
 	protected function set_headers($arr)
 	{
-        $lowercase_header = $this->lowercase_header;
+		$lowercase_header = $this->lowercase_header;
 		$headers = array_map(function($str) use ($lowercase_header) {
-            $str = $lowercase_header
-                ? strtolower(trim($str))
-                : trim($str);
+			$str = $lowercase_header
+				? strtolower(trim($str))
+				: trim($str);
 
 			return preg_replace('/[\s]+/', '_', $str);
 		}, $arr);
