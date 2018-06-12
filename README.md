@@ -60,6 +60,14 @@ If the parser is missing the header row, use the `has_header_row` method with `f
 	$parser->has_header_row(false);
 ```
 
+## Row Numbers
+To parse row numbers with, use the `row_numbers` method with `true` before parsing.
+
+```php
+    $parser->row_numbers(true);
+```
+
+
 ## API Docs
 Available [here](http://scryptmouse.github.com/vsxlsx/).
 
