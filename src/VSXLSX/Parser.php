@@ -184,6 +184,10 @@ class Parser
 	{
 		$this->sheetNum = (int) $number;
 
+		$this->parsed = array();
+		$this->headers = array();
+		$this->header_overrides = array();
+
 		return $this;
 	}
 
