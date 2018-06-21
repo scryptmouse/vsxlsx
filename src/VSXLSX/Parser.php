@@ -146,6 +146,8 @@ class Parser
 	protected $header_overrides = array();
 	/** @var string Directory to store temporary files */
 	protected $base_tmp_dir = './tmp';
+	/** @var boolean Whether or not row numbers should be parsed  */
+	protected $row_numbers = false;
 
 	/**
 	 * @param	string	Path to XLSX file.
@@ -192,9 +194,9 @@ class Parser
 	}
 
 	/**
-     * Define whether or not the header fields should
-     * be lowercased.
-     * Only effective, if header_row = true
+	 * Define whether or not the header fields should
+	 * be lowercased.
+	 * Only effective, if header_row = true
 	 *
 	 * @param	boolean
 	 * @return	Parser
@@ -230,6 +232,19 @@ class Parser
 	public function header_names($arr)
 	{
 		$this->header_overrides = (is_array($arr) && !empty($arr)) ? $arr : false;
+
+		return $this;
+	}
+
+	/**
+	 * Define whether or not row numbers should be parsed
+	 *
+	 * @param boolean
+	 * @return Parser
+	 */
+	public function row_numbers($value = false)
+	{
+		$this->row_numbers = (boolean) $value;
 
 		return $this;
 	}
@@ -370,10 +385,19 @@ class Parser
 				$row[row_index($cell)] = $this->process_cell($cell);
 			}
 
+			$rowAttributes = $xlrow->attributes();
+			$rowNumber = (integer) $rowAttributes->r;
+
 			if ($this->needs_headers()) {
 				$this->set_headers($row);
 			} else {
-				$this->parsed[] = $this->apply_headers($row);
+				$parsedRow = $this->apply_headers($row);
+
+				if ($this->row_numbers) {
+					$parsedRow['__row_number'] = $rowNumber;
+				}
+
+				$this->parsed[] = $parsedRow;
 			}
 		}
 
@@ -459,11 +483,11 @@ class Parser
 	 */
 	protected function set_headers($arr)
 	{
-        $lowercase_header = $this->lowercase_header;
+		$lowercase_header = $this->lowercase_header;
 		$headers = array_map(function($str) use ($lowercase_header) {
-            $str = $lowercase_header
-                ? strtolower(trim($str))
-                : trim($str);
+			$str = $lowercase_header
+				? strtolower(trim($str))
+				: trim($str);
 
 			return preg_replace('/[\s]+/', '_', $str);
 		}, $arr);
